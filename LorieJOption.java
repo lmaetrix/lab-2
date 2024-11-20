@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author yuanb
+ * @author lorie
  */
 public class LorieJOption {
 
@@ -26,8 +26,8 @@ public class LorieJOption {
 
             boolean repeat = false;
             double totalcost = 0.00;
-            String[] product = {"[1]    balut", "[2]    biscuit", "[3]    Gin", "[4]    shabu", "[5]   tapsilog"};
-            double[] prices = {15, 6, 120, 500, 60};
+            String[] product = {"[1]    Nike", "[2]    Jordan", "[3]    Fendi", "[4]    Fila", "[5]   LV"};
+            double[] prices = {7000, 3600, 5000, 1000, 7000};
             String rer = "";
             double discount;
             while (store.equalsIgnoreCase("yes")) {
@@ -35,11 +35,11 @@ public class LorieJOption {
                 String sel = JOptionPane.showInputDialog("Please select Product "
                         + "\n input number to Product Code "
                         + "\n Item               Cost              Code"
-                        + "\n balut              PHP 15              1 "
-                        + "\n biscuit            PHP 6               2 "
-                        + "\n Gin                PHP 120             3 "
-                        + "\n shabu              PHP 500             4 "
-                        + "\n tapsilog           PHP 60              5 ");
+                        + "\n Nike              PHP 7000              1 "
+                        + "\n Jordan            PHP 3600              2 "
+                        + "\n Fendi             PHP 5000              3 "
+                        + "\n Fila              PHP 1000              4 "
+                        + "\n LV                PHP 7000              5 ");
 
                 int select = Integer.parseInt(sel);
                 double price = 0;
@@ -90,19 +90,19 @@ public class LorieJOption {
                 if (store.equalsIgnoreCase("no")) {
                     code = JOptionPane.showInputDialog("You selected \n" + rer + "\nTotal: PHP " + totalcost + "\nDO you have a voucher? Please input in the system. Otherwise, input no");
 
-                    if (code.equalsIgnoreCase("igop")) {
+                    if (code.equalsIgnoreCase("5%")) {
                         discount = (totalcost * (-0.5));
                         totalcost = totalcost + discount;
                         JOptionPane.showInputDialog("You selected \n" + rer);
                         JOptionPane.showInputDialog("Discount " + (discount * -1) + "\nTotal: PHP " + totalcost);
                     }
-                    if (code.equalsIgnoreCase("mentallydrained")) {
+                    if (code.equalsIgnoreCase("12%")) {
                         discount = (totalcost * (-0.12));
                         totalcost = totalcost + discount;
                         JOptionPane.showInputDialog("You selected \n" + rer);
                         JOptionPane.showInputDialog("Discount " + (discount * -1) + "\nTotal: PHP " + totalcost);
                     }
-                    if (code.equalsIgnoreCase("mahal kita")) {
+                    if (code.equalsIgnoreCase("10%")) {
                         discount = (totalcost * (-0.1));
                         totalcost = totalcost + discount;
                         JOptionPane.showInputDialog("You selected \n" + rer);
@@ -135,7 +135,7 @@ public class LorieJOption {
 
                     }
                     if (nil == 3) {
-                        JOptionPane.showMessageDialog(null, "Sorry pero kulang2 imong bayad! pagreorder ug usab. 3 attemps only!!");
+                        JOptionPane.showMessageDialog(null, "Sorry you dont have enough balance! please select another item. 3 attemps only!!");
                     }
 
                 }
